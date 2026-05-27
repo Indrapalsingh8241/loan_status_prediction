@@ -74,9 +74,28 @@ class UserInput(BaseModel):
         Literal['Urban', 'Rural', 'Semiurban'],
         Field(description='Property area')
     ]
+    #MLFLOW
+MODEL_VERSION='2.3.0'
+
+# human readable
+@app.get("/")
+def home():
+    return {"message":"loan status prediction"}
+# machine readable
+ 
+@app.get("/Health")
+def health():
+    return{
+        "status":'OK',
+        "version":MODEL_VERSION,
+        'model_loaded':model is not None
+    }
+#
+
 
 @app.post("/predict")
 def loan_status(data: UserInput):
+
 
     
     data_dict = data.model_dump()
