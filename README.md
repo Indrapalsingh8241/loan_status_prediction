@@ -1,40 +1,31 @@
-# 🏦 Loan Status Prediction using Machine Learning
+# 🏦 Loan Status Prediction System
 
 ## 📌 About the Project
-This project predicts whether a loan application will be approved or rejected using Machine Learning techniques.
 
-The model is trained on historical applicant data such as income, education, credit history, and loan amount.
+This project predicts whether a loan application will be **Approved** or **Rejected** using Machine Learning techniques.
 
----
+The system is built with:
 
-## 🎯 Objective
-To build a classification model that can automate loan approval decisions based on applicant details.
+- 🧠 Machine Learning Model
+- ⚡ FastAPI Backend API
+- 🎨 Streamlit Frontend Web App
 
----
-
-## 📂 Project Structure
-
-loan-status-prediction/
-│
-├── Loan_Status_Prediction.ipynb   # Main notebook
-├── train.csv                      # Dataset
-├── README.md
-├── requirements.txt
+Users can enter applicant details through the Streamlit interface, and the FastAPI backend processes the data and returns the prediction result.
 
 ---
 
-## ⚙️ Setup (Google Colab)
+# 🚀 Features
 
-This project is built using Google Colab, so no local installation is required.
-
-Run the notebook directly in Colab.
-
-If needed:
-!pip install -r requirements.txt
+✅ Loan approval prediction  
+✅ FastAPI REST API integration  
+✅ Interactive Streamlit frontend  
+✅ Data preprocessing pipeline  
+✅ Scalable ML deployment structure  
+✅ Input validation using Pydantic  
 
 ---
 
-## ▶️ Workflow
+# 🧠 Machine Learning Workflow
 
 1. Data Loading  
 2. Data Cleaning  
@@ -43,50 +34,160 @@ If needed:
 5. Feature Scaling using StandardScaler  
 6. Model Training  
 7. Model Evaluation  
+8. API Deployment using FastAPI  
+9. Frontend Integration using Streamlit  
 
 ---
 
-## 🧠 Models Used
+# 🛠️ Technologies Used
 
-- Logistic Regression  
-- Random Forest Classifier  
-- Support Vector Machine (optional)  
-
----
-
-## ⚙️ Preprocessing Techniques
-
-- OneHotEncoder → converts categorical data into numerical format  
-- StandardScaler → scales numerical features for better model performance  
-
----
-
-## 📊 Evaluation Metrics
-
-- Accuracy Score  
-- Confusion Matrix  
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- Matplotlib
+- Seaborn
+- FastAPI
+- Streamlit
+- Pydantic
+- Pickle
 
 ---
 
-## 🛠️ Technologies Used
+# 📂 Project Structure
 
-- Python  
-- NumPy  
-- Pandas  
-- Matplotlib  
-- Seaborn  
-- Scikit-learn  
+```bash
+loan-status-prediction/
+│
+├── app.py                     # FastAPI backend
+├── frontend.py                # Streamlit frontend
+├── Loan_Status_Prediction.ipynb
+├── train.csv
+├── loan_model1.pkl
+├── scaler.pkl
+├── model_columns.pkl
+├── requirements.txt
+└── README.md
+```
 
 ---
 
-## 💡 Future Improvements
+# ⚙️ Installation
 
-- Hyperparameter tuning  
-- Model deployment (Streamlit)  
-- Improve accuracy with advanced models  
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Indrapalsingh8241/loan_status_prediction
+cd loan-status-prediction
+```
 
 ---
 
-## 👨‍💻 Author
+## 2️⃣ Create Virtual Environment
 
-Indrapal Singh
+```bash
+python3 -m venv myvenv
+source myvenv/bin/activate
+```
+
+---
+
+## 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Run the Project
+
+## Start FastAPI Backend
+
+```bash
+uvicorn app:app --reload
+```
+
+Backend runs at:
+
+```bash
+http://127.0.0.1:8000
+```
+
+---
+
+## Start Streamlit Frontend
+
+```bash
+streamlit run frontend.py
+```
+
+Frontend runs at:
+
+```bash
+http://localhost:8501
+```
+
+---
+
+# 🔌 API Endpoints
+
+## Home Endpoint
+
+```http
+GET /
+```
+
+Response:
+
+```json
+{
+  "message": "loan status prediction"
+}
+```
+
+---
+
+## Health Check Endpoint
+
+```http
+GET /Health
+```
+
+---
+
+## Prediction Endpoint
+
+```http
+POST /predict
+```
+
+---
+
+# 📊 Model Evaluation
+
+Evaluation metrics used:
+
+- Accuracy Score
+- Confusion Matrix
+
+---
+
+# 💡 Future Improvements
+
+- Hyperparameter tuning
+- Model deployment on cloud
+- Docker support
+- Authentication system
+- Database integration
+- Better UI/UX
+
+---
+
+# 👨‍💻 Author
+
+## Indrapal Singh
+
+Machine Learning & Backend Developer
+
+---
